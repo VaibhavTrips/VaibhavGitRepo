@@ -97,13 +97,15 @@ public class MainActivity extends Activity  {
 				R.drawable.pic10,R.drawable.space,
 				R.drawable.pic11,R.drawable.space,
 				R.drawable.pic12,R.drawable.space,
-				R.drawable.space,R.drawable.space,
-			    R.drawable.space,R.drawable.space,
-				R.drawable.space,R.drawable.space,
-				R.drawable.space,R.drawable.space,
-				R.drawable.space,R.drawable.space,
-				R.drawable.space,R.drawable.space,
-				R.drawable.space,R.drawable.space};
+				R.drawable.space,R.drawable.space
+				,R.drawable.space,R.drawable.space
+				,R.drawable.space,R.drawable.space,R.drawable.space
+				,R.drawable.space,R.drawable.space,R.drawable.space
+				,R.drawable.space,R.drawable.space,R.drawable.space
+				,R.drawable.space,R.drawable.space,R.drawable.space
+				,R.drawable.space,R.drawable.space,R.drawable.space
+				,R.drawable.space,R.drawable.space,R.drawable.space
+				,R.drawable.space,R.drawable.space,R.drawable.space};
 
 
 
@@ -132,53 +134,50 @@ public class MainActivity extends Activity  {
 		}
 
 		public void callrandom() {
-			try{
-				// TODO Auto-generated method stub
-				Random r= new Random();
+			// TODO Auto-generated method stub
+			Random r= new Random();
 
-				for(int a=0;a<=5;a++)
-				{
-					text.setText(String.valueOf(r.nextInt(max)));
-					System.out.println(r.nextInt(max));
+			for(int a=0;a<=5;a++)
+			{
+				text.setText(String.valueOf(r.nextInt(max)));
+				System.out.println(r.nextInt(max));
 
 
-				}
-			}finally{}
+			}
+
 
 		}
 
 		@Override
 		public View getView(int position, View convertView, ViewGroup parent) {
-			try{
-				// TODO Auto-generated method stub\
+			// TODO Auto-generated method stub\
 
-				for (int index = 0; index < pic.length; index++)
-				{
-					pictures.add(pic[index]);
-				}
+			for (int index = 0; index < pic.length; index++)
+			{
+				pictures.add(pic[index]);
+			}
 
-				Collections.shuffle(pictures);
+			Collections.shuffle(pictures);
 
-				ImageView imageview;
-				if(convertView==null)
-				{
-					imageview=new ImageView(context);
-					imageview.setLayoutParams(new GridView.LayoutParams(100,100));
-					imageview.setScaleType(ImageView.ScaleType.CENTER);
-					imageview.setPadding(30,30,30,30);
-				}
-				else
-				{
-					imageview =(ImageView)convertView;
+			ImageView imageview;
+			if(convertView==null)
+			{
+				imageview=new ImageView(context);
+				imageview.setLayoutParams(new GridView.LayoutParams(100,100));
+				imageview.setScaleType(ImageView.ScaleType.CENTER);
+				imageview.setPadding(8,8,8,8);
+			}
+			else
+			{
+				imageview =(ImageView)convertView;
 
-				}
+			}
 
-				imageview.setImageResource(pictures.get(position));
-				return imageview;
-			}finally{}}
+			imageview.setImageResource(pictures.get(position));
+			return imageview;
+		}
 
 	}
-
 
 }
 
