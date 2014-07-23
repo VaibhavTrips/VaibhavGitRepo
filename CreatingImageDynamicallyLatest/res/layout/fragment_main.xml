@@ -1,0 +1,40 @@
+<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/whitebackground"
+   tools:ignore="MergeRootFrame" 
+    tools:context="com.example.creatingimagedynamically.MainActivity$PlaceholderFragment" >
+
+    <!-- <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="88dp"
+        android:layout_marginTop="90dp" /> -->
+
+    <!-- <RelativeLayout
+        android:id="@+id/layout2"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true" >
+
+    </RelativeLayout> -->
+
+    <ImageButton
+        android:id="@+id/refresh"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_x="818dp"
+        android:layout_y="24dp"
+        android:padding="1dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/save" />
+
+</AbsoluteLayout>
